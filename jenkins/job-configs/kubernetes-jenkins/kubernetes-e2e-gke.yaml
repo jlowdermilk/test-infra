@@ -12,6 +12,8 @@
     # kube-scheduler, l7-default-backend, l7-lb-controller, kube-addon-manager
     provider-env: |
         export CLOUDSDK_API_ENDPOINT_OVERRIDES_CONTAINER="https://test-container.sandbox.googleapis.com/"
+        # Use gcloud credentials for authentication
+        export CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS=false
         export CLOUDSDK_BUCKET="gs://cloud-sdk-testing/ci/staging"
         export E2E_MIN_STARTUP_PODS="8"
         export FAIL_ON_GCP_RESOURCE_LEAK="true"
